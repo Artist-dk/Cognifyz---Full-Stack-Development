@@ -1,1 +1,1 @@
-# Cognifyz---Full-Stack-Development
+# Cognifyz-FullStackDevelopment
