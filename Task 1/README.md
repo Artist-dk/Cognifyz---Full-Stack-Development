@@ -57,3 +57,15 @@ If you encounter any issues or have suggestions for improvements, please feel fr
 ## Author
 
 This project was created by Digambar Kumbhar.
+
+```
+project_directory/
+│
+├── views/
+│   └── index.ejs
+│
+├── public/
+│   └── any_static_files.css
+│
+└── server.js
+```
