@@ -69,3 +69,6 @@ project_directory/
 │
 └── server.js
 ```
+
+- `npm install pug --save`
+- `npm install ejs`
