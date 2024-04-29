@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style src="../public/style.css"></style>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <form id="myForm" action="/submit" method="POST" onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <span id="usernameError" class="error"><%= usernameError %></span>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span id="emailError" class="error"><%= emailError %></span>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var isValid = true;
+
+            if (username === "") {
+                document.getElementById("usernameError").innerHTML = "Please enter a username";
+                isValid = false;
+            } else {
+                document.getElementById("usernameError").innerHTML = "";
+            }
+
+            if (email === "") {
+                document.getElementById("emailError").innerHTML = "Please enter an email";
+                isValid = false;
+            } else {
+                document.getElementById("emailError").innerHTML = "";
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>
